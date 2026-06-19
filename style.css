@@ -1,0 +1,343 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000000;
+    color:#b266ff;
+    font-family:"Comic Sans MS", cursive;
+    line-height:1.7;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:sticky;
+    top:0;
+    background:#000;
+    z-index:1000;
+    border-bottom:1px solid #4d1a7f;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.hamburger{
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.hamburger span{
+    width:30px;
+    height:3px;
+    background:#b266ff;
+    border-radius:10px;
+}
+
+.nav-menu{
+    display:none;
+    position:absolute;
+    right:30px;
+    top:80px;
+    background:#111;
+    padding:15px;
+    border:1px solid #b266ff;
+    border-radius:10px;
+}
+
+.nav-menu.active{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-menu a{
+    color:#b266ff;
+    text-decoration:none;
+}
+
+.nav-menu a:hover{
+    color:#ffffff;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    min-height:80vh;
+    padding:80px 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-small{
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#ffffff;
+}
+
+.hero-text{
+    font-size:1.3rem;
+    margin-bottom:20px;
+}
+
+.hero-description{
+    max-width:700px;
+    margin-bottom:30px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#7a29ff;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#9d57ff;
+}
+
+.btn-secondary{
+    border:1px solid #7a29ff;
+    color:#b266ff;
+}
+
+.btn-secondary:hover{
+    background:#7a29ff;
+    color:white;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-icons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+}
+
+.social-btn{
+    color:#b266ff;
+    text-decoration:none;
+    border:1px solid #7a29ff;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+.social-btn:hover{
+    background:#7a29ff;
+    color:white;
+}
+
+/* =========================
+   PAGE SECTION
+========================= */
+
+.page-section,
+.preview-section{
+    padding:80px 8%;
+}
+
+.section-tag{
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.page-section h1,
+.page-section h2,
+.preview-section h2{
+    margin-bottom:20px;
+}
+
+.about-text{
+    max-width:900px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#111111;
+    border:1px solid #7a29ff;
+    border-radius:12px;
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* =========================
+   SKILLS SCROLL
+========================= */
+
+.skills-scroll{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding:20px 0;
+}
+
+.skills-scroll::-webkit-scrollbar{
+    height:8px;
+}
+
+.skills-scroll::-webkit-scrollbar-thumb{
+    background:#7a29ff;
+    border-radius:10px;
+}
+
+.skill-card{
+    min-width:220px;
+    background:#111111;
+    border:1px solid #7a29ff;
+    border-radius:12px;
+    padding:30px 20px;
+    text-align:center;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-box{
+    background:#111111;
+    border:1px solid #7a29ff;
+    border-radius:12px;
+    padding:25px;
+    max-width:700px;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:700px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:#111111;
+    color:#ffffff;
+    border:1px solid #7a29ff;
+    padding:15px;
+    border-radius:10px;
+    font-family:"Comic Sans MS", cursive;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#ffffff;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.success-message,
+.error-message{
+    display:none;
+    margin-top:20px;
+    font-size:18px;
+}
+
+.success-message{
+    color:#6fff6f;
+}
+
+.error-message{
+    color:#ff6666;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #4d1a7f;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .social-icons{
+        flex-direction:column;
+    }
+
+}
+```

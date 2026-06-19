@@ -1,0 +1,182 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Priya Deshmukh</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "mFQOCMALqa7mU0BDS"
+            });
+        })();
+    </script>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <div class="logo">
+            Priya Deshmukh
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+
+    </nav>
+
+    <!-- Contact Section -->
+
+    <section class="page-section">
+
+        <p class="section-tag">CONTACT</p>
+
+        <h1>📩 Contact Me</h1>
+
+        <p class="about-text">
+            Have a question, internship opportunity, or want to connect?
+            Send me a message and I'll get back to you as soon as possible.
+        </p>
+
+        <form id="contact-form" class="contact-form">
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Write Your Message Here..."
+                rows="7"
+                required
+            ></textarea>
+
+            <button type="submit" class="btn-primary">
+                Send Message
+            </button>
+
+        </form>
+
+        <div id="success-message" class="success-message">
+            ✅ Message sent successfully!
+        </div>
+
+        <div id="error-message" class="error-message">
+            ❌ Failed to send message. Please try again.
+        </div>
+
+    </section>
+
+    <!-- Quick Links -->
+
+    <section class="page-section">
+
+        <h2>🔗 Connect With Me</h2>
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://linkedin.com/in/priya-deshmukh-99144731b"
+                target="_blank"
+                class="btn-secondary"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/Priyadesh111"
+                target="_blank"
+                class="btn-secondary"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="Priya_Deshmukh_OnePage_Resume.pdf"
+                target="_blank"
+                class="btn-primary"
+            >
+                View Resume
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Priya Deshmukh</p>
+    </footer>
+
+    <script>
+
+        const contactForm = document.getElementById("contact-form");
+
+        contactForm.addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            emailjs.sendForm(
+                "service_07ex51i",
+                "template_3pkjzq2",
+                this
+            )
+
+            .then(function() {
+
+                document.getElementById("success-message").style.display = "block";
+                document.getElementById("error-message").style.display = "none";
+
+                contactForm.reset();
+
+            })
+
+            .catch(function(error) {
+
+                console.log(error);
+
+                document.getElementById("error-message").style.display = "block";
+                document.getElementById("success-message").style.display = "none";
+
+            });
+
+        });
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
