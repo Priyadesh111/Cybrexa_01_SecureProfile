@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 /* =========================
    GLOBAL STYLES
 ========================= */
@@ -7,6 +9,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Quicksand', sans-serif;
 }
 
 html{
@@ -15,8 +18,7 @@ html{
 
 body{
     background:#000000;
-    color:#b266ff;
-    font-family:"Comic Sans MS", cursive;
+    color:#d8b4fe;
     line-height:1.7;
 }
 
@@ -37,8 +39,9 @@ nav{
 }
 
 .logo{
-    font-size:1.5rem;
-    font-weight:bold;
+    font-size:1.6rem;
+    font-weight:700;
+    color:#c77dff;
 }
 
 .hamburger{
@@ -51,7 +54,7 @@ nav{
 .hamburger span{
     width:30px;
     height:3px;
-    background:#b266ff;
+    background:#c77dff;
     border-radius:10px;
 }
 
@@ -62,7 +65,7 @@ nav{
     top:80px;
     background:#111;
     padding:15px;
-    border:1px solid #b266ff;
+    border:1px solid #c77dff;
     border-radius:10px;
 }
 
@@ -73,8 +76,9 @@ nav{
 }
 
 .nav-menu a{
-    color:#b266ff;
+    color:#d8b4fe;
     text-decoration:none;
+    font-weight:600;
 }
 
 .nav-menu a:hover{
@@ -96,11 +100,14 @@ nav{
 .hero-small{
     letter-spacing:4px;
     margin-bottom:20px;
+    color:#c77dff;
+    font-weight:600;
 }
 
 .hero h1{
     font-size:4rem;
     margin-bottom:20px;
+    font-weight:700;
 }
 
 .hero h1 span{
@@ -110,11 +117,14 @@ nav{
 .hero-text{
     font-size:1.3rem;
     margin-bottom:20px;
+    color:#c77dff;
+    font-weight:600;
 }
 
 .hero-description{
     max-width:700px;
     margin-bottom:30px;
+    color:#f3e8ff;
 }
 
 /* =========================
@@ -134,6 +144,7 @@ nav{
     padding:12px 25px;
     border-radius:8px;
     transition:0.3s;
+    font-weight:600;
 }
 
 .btn-primary{
@@ -147,7 +158,7 @@ nav{
 
 .btn-secondary{
     border:1px solid #7a29ff;
-    color:#b266ff;
+    color:#d8b4fe;
 }
 
 .btn-secondary:hover{
@@ -166,11 +177,12 @@ nav{
 }
 
 .social-btn{
-    color:#b266ff;
+    color:#d8b4fe;
     text-decoration:none;
     border:1px solid #7a29ff;
     padding:10px 20px;
     border-radius:8px;
+    transition:0.3s;
 }
 
 .social-btn:hover{
@@ -190,16 +202,20 @@ nav{
 .section-tag{
     letter-spacing:3px;
     margin-bottom:10px;
+    color:#c77dff;
 }
 
 .page-section h1,
 .page-section h2,
 .preview-section h2{
     margin-bottom:20px;
+    color:#c77dff;
+    font-weight:700;
 }
 
 .about-text{
     max-width:900px;
+    color:#f3e8ff;
 }
 
 /* =========================
@@ -222,6 +238,12 @@ nav{
 
 .card h3{
     margin-bottom:10px;
+    color:#c77dff;
+    font-weight:700;
+}
+
+.card p{
+    color:#f3e8ff;
 }
 
 /* =========================
@@ -251,6 +273,8 @@ nav{
     border-radius:12px;
     padding:30px 20px;
     text-align:center;
+    color:#f3e8ff;
+    font-weight:600;
 }
 
 /* =========================
@@ -283,7 +307,7 @@ nav{
     border:1px solid #7a29ff;
     padding:15px;
     border-radius:10px;
-    font-family:"Comic Sans MS", cursive;
+    font-family:'Quicksand', sans-serif;
 }
 
 .contact-form input:focus,
@@ -319,6 +343,7 @@ footer{
     text-align:center;
     padding:30px;
     border-top:1px solid #4d1a7f;
+    color:#c77dff;
 }
 
 /* =========================
@@ -339,5 +364,10 @@ footer{
         flex-direction:column;
     }
 
+    .logo{
+        font-size:1.3rem;
+    }
 }
+
+
 ```
